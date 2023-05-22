@@ -6,6 +6,10 @@
      veya spesifik olarak belirlenen test method'ları dışında tum method'ları çalıştırmak
      için kullanırlır
 
+     Eğer bir xml dosyası ile
+     istediğimiz farklı package, class veya class'daki methodları çalıştırmak istersek
+     hiyerarşide uygun yerden yapıyı yeniden başlatabiliriz.
+
 -->
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
@@ -17,7 +21,20 @@
         <classes>
 
             <class name="tests.day15_POM.C06_QualitydemyNegatifLoginTesti">
+                <methods>
+                    <!-- sadece verilen methodları çaıştırması için include  -->
+                    <include name="gecersizSifreTesti"></include>
+                    <include name="gecersizIsimTesti"></include>
 
+                </methods>
+            </class>
+
+            <class name="tests.day14_TestNGFrameworkOluşturma.C01_Priority">
+                <methods>
+                    <!-- verilen methodlar dışındaki tüm methodları çalıştırması için exclude -->
+                    <exclude name="youtubeTesti"></exclude>
+                    <exclude name="amazonTesti"></exclude>
+                </methods>
             </class>
 
         </classes>

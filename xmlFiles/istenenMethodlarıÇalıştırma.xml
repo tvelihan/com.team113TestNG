@@ -1,0 +1,29 @@
+<!-- Bir class'ın içinde bir tek test methodu varsa
+     o methodu çalıştırmak için class'ı çalıştırmak yeterli olacaktır
+
+     method seçimi, birden fazla test merhodu barındıran class'larda
+     spesifik olarak bazı methodları çalıştırmak
+     veya spesifik olarak belirlenen test method'ları dışında tum method'ları çalıştırmak
+     için kullanırlır
+
+-->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen test method'larını çalıştırma">
+
+    <test name="negatif testler">
+
+        <classes>
+
+            <class name="tests.day15_POM.C06_QualitydemyNegatifLoginTesti">
+
+            </class>
+
+        </classes>
+
+
+    </test>
+
+
+</suite>
